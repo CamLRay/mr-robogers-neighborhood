@@ -42,9 +42,9 @@ $(document).ready(function(){
       result = numReplace(numberGenerator(num),name).join(" ");
     }
     if (!isNaN(num)) {
-      $("#output").text("Mr. Roboger sings: " + result + ".");
+      $("#output").html('<p><span class = "mrRobogers">'+"Mr. Roboger sings: "+"</span>" + result + ".</p>");
     } else {
-      $("#output").text("Mr. Roboger says: Error neighbor, please enter a numerical number!");
+      $("#output").html('<p><span class = "mrRobogers"> Mr. Roboger says: </span>' + "Error neighbor, please enter a numerical number!");
     }
   });
 
