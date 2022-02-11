@@ -9,11 +9,13 @@ function numberGenerator(num){
 function numReplace(numArray){
 let beep = numArray.map(function(num){
   if (num.toString().includes(1)) {
-  return "beep!";
+    return "beep!";
+  } else if (num.toString().includes(2)) {
+    return "boop!";
   }
   return num;
 });
 return beep
 }
 
-console.log(numOneReplace([1,3,11,15,100]));
+console.log(numReplace([0,1,2,3]));
