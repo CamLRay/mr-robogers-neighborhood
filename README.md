@@ -34,6 +34,10 @@ Test:"It should replace a number containing 3 with 'Won't you be my neighbor?'"
 Code: numReplace([1,2,3,12]);
 Expected Output: ["beep!","Boop!","Won't you be my neighbor?","boop!"]
 
-Test:"it should replace a number contianing 1 and/or 2 and 3 with 'Won't you be my neighbor?'"
+Test:"It should replace a number contianing 1 and/or 2 and 3 with 'Won't you be my neighbor?'"
 Code: numreplace([0,1,2,3,12,13,23,123]);
-Expected Output: [0, "beep!","Boop!","Won't you be my neighbor?","boop!", "Won't you be my neighbor", "Won't you be my neighbor", "Won't you be my neighbor"]
+Expected Output: [0, "beep!","Boop!","Won't you be my neighbor?","boop!", "Won't you be my neighbor?", "Won't you be my neighbor?", "Won't you be my neighbor?"]
+
+Test:"It should add the users name to the end of the string "Won't you be my neighbor?
+code numreplace([3],name);
+Expected Output: ["Won't you be my neighbor name?"
