@@ -1,3 +1,4 @@
+//Business Logic
 function numberGenerator(num){
   let numArray = [];
   for (let i = 0; i <= num; i++) {
@@ -9,9 +10,9 @@ function numberGenerator(num){
 function numReplace(numArray){
 let beep = numArray.map(function(num){
   if (num.toString().includes(1) && !num.toString().includes(2) && !num.toString().includes(3) ) {
-    return "beep!";
+    return "Beep!";
   } else if (num.toString().includes(2) && !num.toString().includes(3)) {
-    return "boop!";
+    return "Boop!";
   } else if (num.toString().includes(3)) {
     return "Won't you be my neighbor?"
   }
@@ -20,4 +21,16 @@ let beep = numArray.map(function(num){
 return beep
 }
 
-console.log(numReplace([0,1,2,3,12,13,23,123]));
+
+
+//UI Logic
+
+$(document).ready(function(){
+  $("form#formOne").submit(function(e){
+    e.preventDefault();
+    const num = parseInt($("#userNum").val());
+    let result = numReplace(numberGenerator(num)).join(" ");
+    $("#output").text("Mr. Roboger sings: " + result);
+  });
+
+});
