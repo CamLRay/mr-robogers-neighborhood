@@ -30,7 +30,11 @@ $(document).ready(function(){
     e.preventDefault();
     const num = parseInt($("#userNum").val());
     let result = numReplace(numberGenerator(num)).join(" ");
-    $("#output").text("Mr. Roboger sings: " + result);
+    if (!isNaN(num)) {
+      $("#output").text("Mr. Roboger sings: " + result + ".");
+    } else {
+      $("#output").text("Mr. Roboger says: Error neighbor, please enter a numerical number!");
+    }
   });
 
 });
