@@ -8,10 +8,12 @@ function numberGenerator(num){
 
 function numReplace(numArray){
 let beep = numArray.map(function(num){
-  if (num.toString().includes(1) && !num.toString().includes(2)) {
+  if (num.toString().includes(1) && !num.toString().includes(2) && !num.toString().includes(3) ) {
     return "beep!";
-  } else if (num.toString().includes(2)) {
+  } else if (num.toString().includes(2) && !num.toString().includes(3)) {
     return "boop!";
+  } else if (num.toString().includes(3)) {
+    return "Won't you be my neighbor?"
   }
   return num;
 });
