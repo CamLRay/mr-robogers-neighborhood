@@ -8,7 +8,7 @@ function numberGenerator(num){
 
 function numReplace(numArray){
 let beep = numArray.map(function(num){
-  if (num.toString().includes(1)) {
+  if (num.toString().includes(1) && !num.toString().includes(2)) {
     return "beep!";
   } else if (num.toString().includes(2)) {
     return "boop!";
@@ -18,4 +18,4 @@ let beep = numArray.map(function(num){
 return beep
 }
 
-console.log(numReplace([0,1,2,3]));
+console.log(numReplace([0,1,2,3,12]));
