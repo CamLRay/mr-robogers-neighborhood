@@ -19,6 +19,9 @@ Code: numOneReplace(numberGenerator(3));
 Expected Output: [0,"Beep!",2,3]
 
 Test:"it should replace any number containing 1 with "Beep!"
-code: numOneReplace([1,3,11,15,100]);
+Code: numReplace([1,3,11,15,100]);
 Expected Output: ["beep!",3,"beep!","beep!","beep!"]
 
+Test:"it should replace any number containing 2 with "Boop!"
+Code: numReplace([1,2,3]);
+Expected Output: ["beep!","Boop!",3]
