@@ -9,5 +9,11 @@
 ### Describe numberGenerator()
 
 Test:"It should create an array with numbers from 0 through the inputted number"
-Code: numberGenerator(3)
+Code: numberGenerator(3);
 Expected Output: [0,1,2,3]
+
+### Describe numOneReplace()
+
+Test:"It should replace the number 1 with "Beep!"
+Code: numReplace(3);
+Expected Output: [0,"Beep!",2,3]
