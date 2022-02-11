@@ -6,9 +6,9 @@ function numberGenerator(num){
   return numArray
 }
 
-function numOneReplace(numArray){
-let beep = numArray.map(function(num, index){
-  if (num === 1) {
+function numReplace(numArray){
+let beep = numArray.map(function(num){
+  if (num.toString().includes(1)) {
   return "beep!";
   }
   return num;
@@ -16,4 +16,4 @@ let beep = numArray.map(function(num, index){
 return beep
 }
 
-console.log(numOneReplace(numberGenerator(3)));
+console.log(numOneReplace([1,3,11,15,100]));
