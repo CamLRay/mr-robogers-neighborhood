@@ -20,4 +20,4 @@ let beep = numArray.map(function(num){
 return beep
 }
 
-console.log(numReplace([0,1,2,3,12]));
+console.log(numReplace([0,1,2,3,12,13,23,123]));
