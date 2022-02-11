@@ -6,3 +6,8 @@
 4. Numbers containig 3 are replaced with the string "Won't you be my neighbor?"
 5. it should have a hierachy of of prescedence for replacement. 3>2>1. 
 
+### Describe numberGenerator()
+
+Test:"It should create an array with numbers from 0 through the inputted number"
+Code: numberGenerator(3)
+Expected Output: [0,1,2,3]
