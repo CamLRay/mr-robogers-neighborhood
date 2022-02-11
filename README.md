@@ -18,10 +18,14 @@ Test:"It should replace the number 1 with "Beep!"
 Code: numOneReplace(numberGenerator(3));
 Expected Output: [0,"Beep!",2,3]
 
-Test:"it should replace any number containing 1 with "Beep!"
+Test:"It should replace any number containing 1 with "Beep!"
 Code: numReplace([1,3,11,15,100]);
 Expected Output: ["beep!",3,"beep!","beep!","beep!"]
 
-Test:"it should replace any number containing 2 with "Boop!"
+Test:"It should replace any number containing 2 with "Boop!"
 Code: numReplace([1,2,3]);
 Expected Output: ["beep!","Boop!",3]
+
+Test:"It should replace a number containing 1 and 2 with "Boop!"
+Code: numReplace([1,2,3,12]);
+Expected Output : ["beep!","Boop!",3,"boop!"]
