@@ -13,10 +13,10 @@ function numReplace(numArray,name){
       return "Beep!";
     } else if (num.toString().includes(2) && !num.toString().includes(3)) {
       return "Boop!";
-    } else if (num.toString().includes(3) && name === "") {
+    } else if (num.toString().includes(3) && name.trim() === "") {
       return "Won't you be my neighbor?"
-    } else if (num.toString().includes(3) && name !== "") {
-      return "Won't you be my neighbor, " + name + "?"
+    } else if (num.toString().includes(3) && name.trim() !== "") {
+      return "Won't you be my neighbor, " + name.trim() + "?"
     }
     return num;
   });
@@ -27,12 +27,20 @@ function numReplace(numArray,name){
 
 //UI Logic
 
+
 $(document).ready(function(){
   $("form#formOne").submit(function(e){
     e.preventDefault();
-    const num = parseInt($("#userNum").val());
     const name = $("#userName").val().trim();
-    let result = numReplace(numberGenerator(num),name).join(" ");
+    let num = "";
+    let result = "";
+    if ($("#userNum").val()[0] === "!") {
+      num = parseInt($("#userNum").val().replace("!",""));
+      result = numReplace(numberGenerator(num),name).reverse().join(" ");
+    } else {
+      num = parseInt($("#userNum").val())
+      result = numReplace(numberGenerator(num),name).join(" ");
+    }
     if (!isNaN(num)) {
       $("#output").text("Mr. Roboger sings: " + result + ".");
     } else {
